@@ -1,5 +1,7 @@
 import Image from "next/image";
 import heroImage from "../../public/hero-section-image.png.png";
+import { IoIosArrowForward } from "react-icons/io";
+
 
 function Hero() {
   return (
@@ -7,8 +9,14 @@ function Hero() {
       {/* HERO SECTION LIST COLUMN [COLUMN 1] */}
       <div className="w-full md:w-[30%] border-b-2 md:border-b-0 md:border-r-2 border-slate-400 pb-5 md:pb-0 md:pl-9">
         <ul className="flex flex-col items-start gap-2">
-          <li className="font-normal text-black">Women&apos;s Fashion</li>
-          <li className="font-normal text-black">Men&apos;s Fashion</li>
+          <li className="font-normal text-black flex justify-between items-center gap-44">
+            <h2>Women&apos;s Fashion </h2>
+            <IoIosArrowForward className="text-xl"/>
+            </li>
+          <li className="font-normal text-black flex justify-between items-center gap-[12.5rem]">
+            <h2>Men&apos;s Fashion</h2>
+            <IoIosArrowForward className="text-xl"/>
+            </li>
           <li className="font-normal text-black">Electronics</li>
           <li className="font-normal text-black">Home & Lifestyle</li>
           <li className="font-normal text-black">Medicine</li>

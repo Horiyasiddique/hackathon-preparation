@@ -55,11 +55,32 @@ export default function Home() {
           {/* Heading and Timer */}
           <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-8 text-center md:text-left">
             <h1 className="text-2xl md:text-4xl font-semibold">Flash Sales</h1>
-            <h2 className="text-2xl md:text-4xl font-semibold">
-              03 <span className="text-[#DB4444]"> : </span> 23{" "}
-              <span className="text-[#DB4444]"> : </span> 19{" "}
-              <span className="text-[#DB4444]"> : </span> 56
-            </h2>
+            <div className="flex gap-4">
+              <div className="flex flex-col items-center">
+                <h3 className="text-sm font-medium">Days</h3>
+                <h2 className="text-2xl md:text-4xl font-semibold">
+                  03 <span className="text-[#DB4444]"> : </span>
+                </h2>
+              </div>
+              <div className="flex flex-col items-center">
+                <h3 className="text-sm font-medium">Hours</h3>
+                <h2 className="text-2xl md:text-4xl font-semibold">
+                  23 <span className="text-[#DB4444]"> : </span>
+                </h2>
+              </div>
+              <div className="flex flex-col items-center">
+                <h3 className="text-sm font-medium">Minutes</h3>
+                <h2 className="text-2xl md:text-4xl font-semibold">
+                  19 <span className="text-[#DB4444]"> : </span>
+                </h2>
+              </div>
+              <div className="flex flex-col items-center">
+                <h3 className="text-sm font-medium">Seconds</h3>
+                <h2 className="text-2xl md:text-4xl font-semibold">
+                  56 <span className="text-[#DB4444]"> : </span>
+                </h2>
+              </div>
+            </div>
           </div>
 
           {/* Arrow Buttons */}
@@ -110,30 +131,33 @@ export default function Home() {
       </div>
 
       {/* 4th section Browse By Category starts here.... */}
-      <div className="w-screen h-auto py-12 px-14 flex flex-col flex-wrap  gap-12 border-b-2 border-slate-400">
+
+      <div className="w-screen h-auto py-12 px-4 md:px-14 flex flex-col gap-12 border-b-2 border-slate-400">
         <div className="flex items-center gap-3">
           <div className="w-5 h-12 bg-[#DB4444] rounded-md"></div>
           <h1 className="text-xl font-semibold text-[#DB4444]">Categories</h1>
         </div>
-        <div className="flex justify-between items-center ">
-          <div className="flex items-center gap-8 ">
-            <h1 className="text-4xl font-semibold">Browse By Category</h1>
+
+        <div className="flex justify-between items-center flex-col md:flex-row">
+          <div className="flex items-center gap-8">
+            <h1 className="text-3xl font-semibold text-center md:text-left">
+              Browse By Category
+            </h1>
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-2 items-center mt-4 md:mt-0">
             <HiArrowSmallLeft className="text-black text-4xl bg-slate-300 rounded-full text-center p-2" />
             <HiArrowSmallRight className="text-black text-4xl bg-slate-300 rounded-full text-center p-2" />
           </div>
         </div>
-        <div className="flex justify-between items-center flex-wrap">
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           <BCards image={image6} name="Phones" />
           <BCards image={image7} name="Computer" />
           <BCards image={image8} name="Smart Watch" />
           <div className="bg-[#DB4444]">
             <BCards image={image9} name="Camera" />
           </div>
-
           <BCards image={image5} name="HeadPhones" />
-
           <BCards image={image10} name="Gaming" />
         </div>
       </div>
@@ -187,48 +211,47 @@ export default function Home() {
 
       {/* 6th section enhance youre music experience [hero section] starts here....*/}
       <div className="w-auto h-auto flex flex-col md:flex-row justify-between items-center py-8 px-6 md:px-14 bg-black m-6 rounded-lg">
-  {/* Left Section */}
-  <div className="flex flex-col gap-5 mb-6 md:mb-0">
-    <h1 className="text-[17px] text-green-400 font-bold">Categories</h1>
-    <div className="text-3xl md:text-5xl text-white font-medium text-center md:text-left">
-      <h2 className="mb-2">Enhance Your</h2>
-      <h2>Music Experience</h2>
-    </div>
-    <div className="flex justify-center md:justify-start items-center flex-wrap gap-4 md:gap-6">
-      <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex flex-col justify-center items-center">
-        <h2 className="text-[15px] md:text-[17px] font-medium">24</h2>
-        <p className="text-[12px] md:text-[14px] font-light">Hours</p>
-      </div>
-      <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex flex-col justify-center items-center">
-        <h2 className="text-[15px] md:text-[17px] font-medium">05</h2>
-        <p className="text-[12px] md:text-[14px] font-light">Days</p>
-      </div>
-      <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex flex-col justify-center items-center">
-        <h2 className="text-[15px] md:text-[17px] font-medium">59</h2>
-        <p className="text-[12px] md:text-[14px] font-light">Minutes</p>
-      </div>
-      <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex flex-col justify-center items-center">
-        <h2 className="text-[15px] md:text-[17px] font-medium">34</h2>
-        <p className="text-[12px] md:text-[14px] font-light">Seconds</p>
-      </div>
-    </div>
-    <div className="flex justify-center md:justify-start">
-      <button className="bg-green-400 text-white text-lg md:text-xl font-medium rounded-lg py-2 px-5 md:py-3 md:px-6">
-        Buy Now!
-      </button>
-    </div>
-  </div>
+        {/* Left Section */}
+        <div className="flex flex-col gap-5 mb-6 md:mb-0">
+          <h1 className="text-[17px] text-green-400 font-bold">Categories</h1>
+          <div className="text-3xl md:text-5xl text-white font-medium text-center md:text-left">
+            <h2 className="mb-2">Enhance Your</h2>
+            <h2>Music Experience</h2>
+          </div>
+          <div className="flex justify-center md:justify-start items-center flex-wrap gap-4 md:gap-6">
+            <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex flex-col justify-center items-center">
+              <h2 className="text-[15px] md:text-[17px] font-medium">24</h2>
+              <p className="text-[12px] md:text-[14px] font-light">Hours</p>
+            </div>
+            <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex flex-col justify-center items-center">
+              <h2 className="text-[15px] md:text-[17px] font-medium">05</h2>
+              <p className="text-[12px] md:text-[14px] font-light">Days</p>
+            </div>
+            <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex flex-col justify-center items-center">
+              <h2 className="text-[15px] md:text-[17px] font-medium">59</h2>
+              <p className="text-[12px] md:text-[14px] font-light">Minutes</p>
+            </div>
+            <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex flex-col justify-center items-center">
+              <h2 className="text-[15px] md:text-[17px] font-medium">34</h2>
+              <p className="text-[12px] md:text-[14px] font-light">Seconds</p>
+            </div>
+          </div>
+          <div className="flex justify-center md:justify-start">
+            <button className="bg-green-400 text-white text-lg md:text-xl font-medium rounded-lg py-2 px-5 md:py-3 md:px-6">
+              Buy Now!
+            </button>
+          </div>
+        </div>
 
-  {/* Right Section */}
-  <div className="flex justify-center items-center">
-    <Image
-      src={metaImage}
-      alt="Hero Section Image"
-      className="w-full max-w-xs md:max-w-md"
-    />
-  </div>
-</div>
-
+        {/* Right Section */}
+        <div className="flex justify-center items-center">
+          <Image
+            src={metaImage}
+            alt="Hero Section Image"
+            className="w-full max-w-xs md:max-w-md"
+          />
+        </div>
+      </div>
 
       {/* 7th section Our Products starts here ...... */}
       <div className="w-screen h-auto py-12 px-14 flex flex-col  gap-12 border-b-2 border-slate-400">

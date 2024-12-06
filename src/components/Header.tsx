@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CiHeart } from "react-icons/ci";
+import { RiArrowDropDownLine } from "react-icons/ri";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -13,14 +14,17 @@ function Header() {
   return (
     <div>
       {/* Top Announcement Bar */}
-      <div className="bg-black text-white font-normal flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 md:gap-12 px-6 md:px-12 py-4 text-sm md:text-xl">
+      <div className="bg-black text-white font-normal flex flex-col md:flex-row justify-center md:justify-center items-center gap-4 md:gap-12 px-6 md:px-12 py-4 text-sm md:text-xl">
         <div className="text-center md:text-left">
           <p>
             Summer Sale For All Swim Suits and Free Express Delivery -50% Off!{" "}
-            <span className="font-semibold cursor-pointer">Shop Now</span>
+            <span className="font-semibold cursor-pointer border-b-2 border-white">Shop Now</span>
           </p>
         </div>
-        <div className="text-center md:text-right">English</div>
+        <div className="text-center md:text-right flex items-center justify-center">
+          <h1>English</h1>
+          <RiArrowDropDownLine className="text-4xl" />
+          </div>
       </div>
 
       {/* Main Header */}
@@ -32,7 +36,7 @@ function Header() {
 
         {/* Navigation Links (Hidden on small screens) */}
         <ul className="hidden md:flex justify-center gap-8 text-lg font-normal">
-          {["Home", "Contact", "About", "Sign Up"].map((item) => (
+          {["Home", "Contact", "About", "SignUp"].map((item) => (
             <li key={item}>
               <Link
                 href={`/${item === "Home" ? "" : item}`}
